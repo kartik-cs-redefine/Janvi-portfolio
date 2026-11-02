@@ -95,7 +95,7 @@ export default function Navbar() {
             </button>
 
             <a
-              href="https://www.linkedin.com/in/janvi-sahu-7b1892323/"
+              href="https://www.linkedin.com/in/janvi-sahu-0968b8329/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold text-xs font-mono tracking-wider uppercase hover:brightness-110 shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all cursor-pointer"
@@ -142,7 +142,7 @@ export default function Navbar() {
                 Contact
               </button>
               <a
-                href="https://www.linkedin.com/in/janvi-sahu-7b1892323/"
+                href="https://www.linkedin.com/in/janvi-sahu-0968b8329/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex-1 py-2.5 text-center rounded-xl bg-amber-400 text-black font-bold text-xs font-mono tracking-wider uppercase"
@@ -197,7 +197,7 @@ export default function Navbar() {
               </div>
 
               <a
-                href="https://www.linkedin.com/in/janvi-sahu-7b1892323/"
+                href="https://www.linkedin.com/in/janvi-sahu-0968b8329/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-between p-4 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-amber-300 hover:bg-amber-400/20 transition-all cursor-pointer group"

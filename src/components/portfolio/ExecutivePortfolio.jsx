@@ -640,7 +640,7 @@ export default function ExecutivePortfolio() {
             {/* Action Row */}
             <div className="flex flex-wrap items-center gap-4 pt-3">
               <a
-                href="https://www.linkedin.com/in/janvi-sahu-7b1892323/"
+                href="https://www.linkedin.com/in/janvi-sahu-0968b8329/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold text-xs tracking-wider uppercase hover:brightness-110 shadow-[0_0_25px_rgba(245,158,11,0.3)] transition-all cursor-pointer"
@@ -1392,7 +1392,7 @@ export default function ExecutivePortfolio() {
 
         <div className="flex items-center gap-6">
           <a
-            href="https://www.linkedin.com/in/janvi-sahu-7b1892323/"
+            href="https://www.linkedin.com/in/janvi-sahu-0968b8329/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-amber-400 transition-colors flex items-center gap-1.5"
