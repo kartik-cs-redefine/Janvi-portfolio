@@ -57,8 +57,8 @@ export default function Navbar() {
             onClick={(e) => handleLinkClick(e, '#overview')}
             className="flex items-center gap-3 group cursor-pointer select-none"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center font-bold text-black text-sm tracking-tight shadow-[0_0_15px_rgba(245,158,11,0.4)] group-hover:scale-105 transition-transform">
-              G
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-zinc-900 to-black border border-amber-400/40 flex items-center justify-center p-1.5 shadow-[0_0_15px_rgba(245,158,11,0.3)] group-hover:scale-105 group-hover:border-amber-400 transition-all">
+              <img src="/favicon-64.png" alt="Mic Icon" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-sm sm:text-base text-white tracking-wide uppercase group-hover:text-amber-400 transition-colors">
