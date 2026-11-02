@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @layer base {
   :root {
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -13,6 +15,12 @@
   }
 
   body {
+    background-color: #faf9f6;
+    color: #18181b;
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  html.dark body {
     background-color: #08080a;
     color: #f4f4f5;
   }
@@ -35,13 +43,18 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #08080a;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #d4d4d8;
   border-radius: 9999px;
 }
+.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
 ::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
 }
-

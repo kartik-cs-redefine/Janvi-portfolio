@@ -556,35 +556,35 @@ export default function ExecutivePortfolio() {
   };
 
   return (
-    <div className="relative w-full bg-[#08090d] text-zinc-100 font-sans selection:bg-amber-400 selection:text-black">
+    <div className="relative w-full bg-[#fbfbfd] dark:bg-[#08090d] text-zinc-900 dark:text-zinc-100 font-sans selection:bg-amber-400 selection:text-black transition-colors duration-300">
       {/* 0. LASER PROGRESS BAR */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500 z-50 origin-left shadow-[0_0_12px_rgba(245,158,11,0.5)]"
+        className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-amber-500 via-amber-300 to-amber-600 dark:from-amber-400 dark:via-amber-200 dark:to-amber-500 z-50 origin-left shadow-[0_0_12px_rgba(245,158,11,0.5)]"
         style={{ scaleX }}
       />
 
       {/* ============================================================ */}
       {/* 1. EDITORIAL EXECUTIVE HERO */}
       {/* ============================================================ */}
-      <section id="overview" className="relative min-h-[92vh] flex flex-col justify-between pt-28 pb-16 px-6 max-w-7xl mx-auto border-b border-white/[0.08]">
+      <section id="overview" className="relative min-h-[92vh] flex flex-col justify-between pt-28 pb-16 px-6 max-w-7xl mx-auto border-b border-zinc-200/80 dark:border-white/[0.08]">
         {/* Subtle Ambient Background Lighting */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-cyan-500/5 blur-[120px] pointer-events-none rounded-full" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-r from-amber-400/15 via-rose-300/10 to-amber-200/15 dark:from-amber-500/10 dark:via-amber-400/5 dark:to-cyan-500/5 blur-[120px] pointer-events-none rounded-full" />
 
         {/* Top Status Bar */}
         <div className="flex flex-wrap items-center justify-between gap-4 relative z-10">
-          <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 bg-white/[0.04] border border-white/[0.08] px-3.5 py-1.5 rounded-full backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-zinc-300">Undergraduate Scholar · BCA '27</span>
+          <div className="flex items-center gap-2 text-xs font-mono text-zinc-600 dark:text-zinc-400 bg-white/80 dark:bg-white/[0.04] border border-zinc-200/80 dark:border-white/[0.08] px-3.5 py-1.5 rounded-full backdrop-blur-md shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
+            <span className="text-zinc-800 dark:text-zinc-300 font-medium">Undergraduate Scholar · BCA '27</span>
           </div>
 
-          <div className="flex items-center gap-3 text-xs font-mono text-zinc-400 bg-white/[0.04] border border-white/[0.08] px-3.5 py-1.5 rounded-full backdrop-blur-md">
-            <span className="flex items-center gap-1.5 text-zinc-300">
-              <MapPin className="w-3.5 h-3.5 text-amber-400" />
+          <div className="flex items-center gap-3 text-xs font-mono text-zinc-600 dark:text-zinc-400 bg-white/80 dark:bg-white/[0.04] border border-zinc-200/80 dark:border-white/[0.08] px-3.5 py-1.5 rounded-full backdrop-blur-md shadow-xs">
+            <span className="flex items-center gap-1.5 text-zinc-800 dark:text-zinc-300 font-medium">
+              <MapPin className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
               <span>Kanpur, UP</span>
             </span>
-            <span className="text-zinc-600">•</span>
-            <span className="flex items-center gap-1.5 text-zinc-300">
-              <Clock className="w-3.5 h-3.5 text-amber-400" />
+            <span className="text-zinc-300 dark:text-zinc-600">•</span>
+            <span className="flex items-center gap-1.5 text-zinc-800 dark:text-zinc-300 font-medium">
+              <Clock className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
               <span>{currentTime || 'IST'}</span>
             </span>
           </div>
@@ -595,37 +595,37 @@ export default function ExecutivePortfolio() {
           {/* Left Text Column */}
           <div className="lg:col-span-8 space-y-6">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/[0.08] border border-amber-400/20 text-xs font-mono tracking-widest uppercase text-amber-300">
-                <Mic className="w-3.5 h-3.5 text-amber-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 dark:bg-amber-400/[0.08] border border-amber-500/25 dark:border-amber-400/20 text-xs font-mono tracking-widest uppercase text-amber-700 dark:text-amber-300 font-semibold">
+                <Mic className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
                 <span>Stage Anchoring & Technical Leadership</span>
               </div>
-              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white uppercase leading-[0.92]">
+              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-zinc-950 dark:text-white uppercase leading-[0.92]">
                 Janvi Sahu
               </h1>
             </div>
 
-            <p className="text-lg sm:text-2xl font-normal text-zinc-300 leading-snug tracking-tight">
+            <p className="text-lg sm:text-2xl font-normal text-zinc-700 dark:text-zinc-300 leading-snug tracking-tight">
               Event Anchor & BCA Scholar · Joint Secretary, CodeVidya · CSJM University
             </p>
 
-            <p className="text-sm sm:text-base text-zinc-400 max-w-2xl leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed font-light">
               Undergraduate scholar in Computer Applications and stage anchor at CSJM University, Kanpur. 
-              Moderated flagship developer summits including <strong>GDG DevFest Kanpur</strong> and <strong>National Startup Day</strong>, 
+              Moderated flagship developer summits including <strong className="text-zinc-900 dark:text-white font-semibold">GDG DevFest Kanpur</strong> and <strong className="text-zinc-900 dark:text-white font-semibold">National Startup Day</strong>, 
               earned project presentation awards at state innovation events, and coordinates student technical chapters 
-              while maintaining an <strong>8.8 CGPA</strong>.
+              while maintaining an <strong className="text-zinc-900 dark:text-white font-semibold">8.8 CGPA</strong>.
             </p>
 
             {/* Stage Voice / Mic Frequency Visualizer */}
             <div className="flex items-center gap-3 pt-1">
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
-                <Volume2 className="w-3.5 h-3.5 text-amber-400" />
-                <span className="text-zinc-400">STAGE VOICE FREQUENCY</span>
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 dark:bg-white/[0.04] border border-zinc-200/80 dark:border-white/[0.08] text-[11px] font-mono text-zinc-700 dark:text-zinc-300 shadow-xs">
+                <Volume2 className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
+                <span className="text-zinc-600 dark:text-zinc-400">STAGE VOICE FREQUENCY</span>
               </div>
-              <div className="flex items-center gap-1 h-5 px-2 py-1 rounded-full bg-white/[0.02] border border-white/[0.05]">
+              <div className="flex items-center gap-1 h-5 px-2 py-1 rounded-full bg-amber-50/60 dark:bg-white/[0.02] border border-amber-200/60 dark:border-white/[0.05]">
                 {[35, 70, 95, 55, 80, 45, 90, 65, 30, 75, 60, 85, 45, 80, 55].map((h, i) => (
                   <motion.span
                     key={i}
-                    className="w-0.5 bg-gradient-to-t from-amber-500/70 to-amber-300 rounded-full"
+                    className="w-0.5 bg-gradient-to-t from-amber-500 to-amber-400 dark:from-amber-500/70 dark:to-amber-300 rounded-full"
                     animate={{ height: [`${Math.max(20, h * 0.35)}%`, `${h}%`, `${Math.max(15, h * 0.25)}%`] }}
                     transition={{
                       duration: 0.85 + (i % 5) * 0.12,
@@ -643,7 +643,7 @@ export default function ExecutivePortfolio() {
                 href="https://www.linkedin.com/in/janvi-sahu-0968b8329/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold text-xs tracking-wider uppercase hover:brightness-110 shadow-[0_0_25px_rgba(245,158,11,0.3)] transition-all cursor-pointer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 dark:from-amber-400 dark:to-amber-500 text-white dark:text-black font-semibold text-xs tracking-wider uppercase hover:brightness-110 shadow-md dark:shadow-[0_0_25px_rgba(245,158,11,0.3)] transition-all cursor-pointer"
               >
                 <span>LinkedIn Dossier</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -654,7 +654,7 @@ export default function ExecutivePortfolio() {
                   const el = document.getElementById('narrative-scroll-stage');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/[0.12] bg-white/[0.04] hover:bg-white/[0.08] text-xs font-mono uppercase tracking-wider text-zinc-300 hover:text-white transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-200 dark:border-white/[0.12] bg-white/90 dark:bg-white/[0.04] hover:bg-zinc-100 dark:hover:bg-white/[0.08] text-xs font-mono uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white shadow-xs transition-all cursor-pointer"
               >
                 <span>Explore Milestones</span>
                 <ChevronDown className="w-4 h-4" />
@@ -665,9 +665,9 @@ export default function ExecutivePortfolio() {
                   const el = document.getElementById('act-academics');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/[0.08] bg-black/40 hover:bg-white/[0.06] text-xs font-mono uppercase tracking-wider text-zinc-400 hover:text-white transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-200 dark:border-white/[0.08] bg-zinc-100 dark:bg-black/40 hover:bg-zinc-200 dark:hover:bg-white/[0.06] text-xs font-mono uppercase tracking-wider text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all cursor-pointer"
               >
-                <FileText className="w-3.5 h-3.5 text-zinc-400" />
+                <FileText className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
                 <span>Academic Record</span>
               </button>
             </div>
@@ -675,10 +675,10 @@ export default function ExecutivePortfolio() {
 
           {/* Right: Executive Portrait Card */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <div className="relative group w-72 sm:w-80 p-6 rounded-3xl border border-white/[0.1] bg-gradient-to-b from-zinc-900/80 via-zinc-950/90 to-black/95 backdrop-blur-2xl shadow-2xl space-y-5">
+            <div className="relative group w-72 sm:w-80 p-6 rounded-3xl border border-zinc-200/90 dark:border-white/[0.1] bg-gradient-to-b from-white via-zinc-50/90 to-zinc-100/95 dark:from-zinc-900/80 dark:via-zinc-950/90 dark:to-black/95 backdrop-blur-2xl shadow-xl dark:shadow-2xl space-y-5">
               {/* Profile Avatar Frame */}
-              <div className="relative mx-auto w-44 h-44 rounded-full p-1 bg-gradient-to-tr from-amber-400/80 via-white/20 to-amber-500/80 shadow-[0_0_35px_rgba(245,158,11,0.2)]">
-                <div className="w-full h-full rounded-full overflow-hidden bg-zinc-950 relative border-2 border-black">
+              <div className="relative mx-auto w-44 h-44 rounded-full p-1 bg-gradient-to-tr from-amber-500 via-amber-300 to-amber-600 dark:from-amber-400/80 dark:via-white/20 dark:to-amber-500/80 shadow-md dark:shadow-[0_0_35px_rgba(245,158,11,0.2)]">
+                <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-zinc-950 relative border-2 border-white dark:border-black">
                   <img
                     src="/linkedin/profile-avatar.jpg?v=2"
                     alt="Janvi Sahu"
@@ -691,29 +691,29 @@ export default function ExecutivePortfolio() {
                 </div>
 
                 {/* Verified Crest Badge */}
-                <div className="absolute bottom-1 right-1 p-2 rounded-full bg-zinc-950 border border-white/20 text-amber-400 shadow-lg">
+                <div className="absolute bottom-1 right-1 p-2 rounded-full bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-white/20 text-amber-600 dark:text-amber-400 shadow-lg">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
               </div>
 
               {/* Bio summary */}
               <div className="text-center space-y-1">
-                <h3 className="font-bold text-lg text-white">Janvi Sahu</h3>
-                <p className="text-xs text-amber-400 font-mono">BCA '27 · CSJMU Kanpur</p>
-                <p className="text-[11px] text-zinc-400 font-light pt-0.5 tracking-wide">
+                <h3 className="font-bold text-lg text-zinc-900 dark:text-white">Janvi Sahu</h3>
+                <p className="text-xs text-amber-600 dark:text-amber-400 font-mono">BCA '27 · CSJMU Kanpur</p>
+                <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-light pt-0.5 tracking-wide">
                   Joint Secretary, CodeVidya · Stage Emcee
                 </p>
               </div>
 
               {/* Quick credential chips */}
-              <div className="pt-2 border-t border-white/[0.08] grid grid-cols-2 gap-2 text-center text-[10px] font-mono">
-                <div className="p-2 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+              <div className="pt-2 border-t border-zinc-200 dark:border-white/[0.08] grid grid-cols-2 gap-2 text-center text-[10px] font-mono">
+                <div className="p-2 rounded-xl bg-white dark:bg-white/[0.03] border border-zinc-200 dark:border-white/[0.05] shadow-xs">
                   <span className="text-zinc-500 block uppercase">ACADEMIC</span>
-                  <span className="font-bold text-amber-400 text-xs">8.8 CGPA</span>
+                  <span className="font-bold text-amber-600 dark:text-amber-400 text-xs">8.8 CGPA</span>
                 </div>
-                <div className="p-2 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                <div className="p-2 rounded-xl bg-white dark:bg-white/[0.03] border border-zinc-200 dark:border-white/[0.05] shadow-xs">
                   <span className="text-zinc-500 block uppercase">EVENTS</span>
-                  <span className="font-bold text-zinc-200 text-xs">20+ Stages</span>
+                  <span className="font-bold text-zinc-800 dark:text-zinc-200 text-xs">20+ Stages</span>
                 </div>
               </div>
             </div>
@@ -721,7 +721,7 @@ export default function ExecutivePortfolio() {
         </div>
 
         {/* 5-Column High-Impact Metric Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 pt-8 border-t border-white/[0.08] relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 pt-8 border-t border-zinc-200/80 dark:border-white/[0.08] relative z-10">
           {[
             { label: 'Academic Standing', val: '8.8 CGPA', sub: 'CSJMU BCA Program' },
             { label: 'Auditorium Stages', val: '20+ Summits', sub: 'DevFest, Startup Day' },
@@ -731,13 +731,13 @@ export default function ExecutivePortfolio() {
           ].map((stat, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm hover:border-amber-400/30 hover:bg-white/[0.05] transition-all"
+              className="p-4 rounded-xl bg-white/90 dark:bg-white/[0.03] border border-zinc-200/80 dark:border-white/[0.06] backdrop-blur-sm shadow-xs hover:border-amber-500/50 dark:hover:border-amber-400/30 hover:shadow-md dark:hover:bg-white/[0.05] transition-all"
             >
               <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 block">
                 {stat.label}
               </span>
-              <p className="text-lg sm:text-xl font-bold text-white tracking-tight mt-1">{stat.val}</p>
-              <p className="text-[10px] text-amber-400/90 font-mono mt-0.5 truncate">{stat.sub}</p>
+              <p className="text-lg sm:text-xl font-bold text-zinc-950 dark:text-white tracking-tight mt-1">{stat.val}</p>
+              <p className="text-[10px] text-amber-600 dark:text-amber-400/90 font-mono mt-0.5 truncate">{stat.sub}</p>
             </div>
           ))}
         </div>
@@ -746,7 +746,7 @@ export default function ExecutivePortfolio() {
       {/* ============================================================ */}
       {/* 2. INFINITE TICKER: INSTITUTIONS & STAGES */}
       {/* ============================================================ */}
-      <div className="relative w-full border-b border-white/[0.08] py-4 bg-black/40 backdrop-blur-md">
+      <div className="relative w-full border-b border-zinc-200/80 dark:border-white/[0.08] py-4 bg-zinc-100/60 dark:bg-black/40 backdrop-blur-md">
         <Marquee duration={35} pauseOnHover={true} fade={true} className="py-1">
           {[
             'GOOGLE DEVELOPER GROUP (GDG)',
@@ -760,9 +760,9 @@ export default function ExecutivePortfolio() {
           ].map((brand, bIdx) => (
             <span
               key={bIdx}
-              className="inline-flex items-center gap-3 text-xs font-mono tracking-widest text-zinc-400 uppercase mx-6"
+              className="inline-flex items-center gap-3 text-xs font-mono tracking-widest text-zinc-600 dark:text-zinc-400 uppercase mx-6"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 dark:bg-amber-400" />
               <span>{brand}</span>
             </span>
           ))}
@@ -775,13 +775,13 @@ export default function ExecutivePortfolio() {
       <section id="narrative-scroll-stage" className="relative max-w-7xl mx-auto px-6 py-24">
         {/* Section Heading Banner */}
         <div className="mb-16 space-y-2">
-          <span className="text-xs font-mono tracking-widest uppercase text-amber-400">
+          <span className="text-xs font-mono tracking-widest uppercase text-amber-600 dark:text-amber-400 font-semibold">
             CHRONOLOGICAL ARCHIVE // 2024–2026
           </span>
-          <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-black text-zinc-950 dark:text-white uppercase tracking-tight">
             Documented Milestones & Live Evidence
           </h2>
-          <p className="text-sm text-zinc-400 max-w-2xl font-light">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl font-light">
             Verified stage appearances, competitive hackathons, student leadership roles, and scholastic records.
           </p>
         </div>
@@ -793,14 +793,14 @@ export default function ExecutivePortfolio() {
             {portfolioActs.map((act) => (
               <div key={act.actNumber} id={act.id} className="space-y-12">
                 {/* Act Header */}
-                <div className="relative pl-6 border-l-2 border-amber-400/50 space-y-1.5">
-                  <span className="text-xs font-mono tracking-widest text-amber-400 uppercase">
+                <div className="relative pl-6 border-l-2 border-amber-500 dark:border-amber-400/50 space-y-1.5">
+                  <span className="text-xs font-mono tracking-widest text-amber-600 dark:text-amber-400 uppercase font-semibold">
                     ACT {act.actNumber} // {act.subtitle}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-zinc-950 dark:text-white tracking-tight">
                     {act.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-zinc-400 font-light">
+                  <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-light">
                     {act.tagline}
                   </p>
                 </div>
@@ -824,14 +824,14 @@ export default function ExecutivePortfolio() {
                             setActiveStoryIndex(idx);
                           }
                         }}
-                        className={`group p-7 sm:p-8 rounded-3xl border transition-all duration-400 space-y-6 shadow-xl relative overflow-hidden cursor-pointer ${
+                        className={`group p-7 sm:p-8 rounded-3xl border transition-all duration-400 space-y-6 shadow-md relative overflow-hidden cursor-pointer ${
                           isStoryActive
-                            ? 'border-amber-400/60 bg-zinc-950/95 shadow-[0_0_40px_rgba(245,158,11,0.08)] ring-1 ring-amber-400/20'
-                            : 'border-white/[0.08] bg-zinc-950/60 hover:border-white/20 hover:bg-zinc-950/80'
+                            ? 'border-amber-500/70 bg-white dark:border-amber-400/60 dark:bg-zinc-950/95 shadow-xl dark:shadow-[0_0_40px_rgba(245,158,11,0.08)] ring-1 ring-amber-500/20 dark:ring-amber-400/20'
+                            : 'border-zinc-200/80 bg-white/70 hover:border-zinc-300 hover:bg-white dark:border-white/[0.08] dark:bg-zinc-950/60 dark:hover:border-white/20 dark:hover:bg-zinc-950/80'
                         }`}
                       >
                         {/* Top Meta Bar */}
-                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.06] pb-4">
+                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200/60 dark:border-white/[0.06] pb-4">
                           <span
                             className="px-3 py-1 rounded-full text-[11px] font-mono font-medium border"
                             style={{
@@ -843,7 +843,7 @@ export default function ExecutivePortfolio() {
                             {story.badge}
                           </span>
 
-                          <span className="text-[11px] text-zinc-400 font-mono flex items-center gap-1.5">
+                          <span className="text-[11px] text-zinc-500 dark:text-zinc-400 font-mono flex items-center gap-1.5">
                             <Calendar className="w-3 h-3 text-zinc-400" />
                             <span>{story.date}</span>
                           </span>
@@ -852,24 +852,24 @@ export default function ExecutivePortfolio() {
                         {/* Title & Organization */}
                         <div className="space-y-1.5">
                           <div className="flex flex-wrap items-center justify-between gap-2">
-                            <h4 className="text-xl sm:text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">
+                            <h4 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
                               {story.title}
                             </h4>
                             {storyImages.length > 1 && (
-                              <span className="text-[10px] text-amber-300 font-mono bg-amber-400/10 border border-amber-400/25 px-2.5 py-0.5 rounded-full">
+                              <span className="text-[10px] text-amber-700 dark:text-amber-300 font-mono bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/25 dark:border-amber-400/25 px-2.5 py-0.5 rounded-full font-medium">
                                 {storyImages.length} Photos Available
                               </span>
                             )}
                           </div>
-                          <p className="text-xs text-amber-400/90 font-mono flex items-center gap-1.5">
-                            <Building className="w-3.5 h-3.5 text-amber-400" />
+                          <p className="text-xs text-amber-600 dark:text-amber-400/90 font-mono flex items-center gap-1.5 font-medium">
+                            <Building className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
                             <span>{story.organization}</span>
                           </p>
                         </div>
 
                         {/* Mobile Preview (Inline carousel or Credential card for small screens) */}
                         {story.isCredential ? (
-                          <div className="block lg:hidden rounded-2xl overflow-hidden border border-white/[0.1] p-5 bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 relative space-y-3">
+                          <div className="block lg:hidden rounded-2xl overflow-hidden border border-zinc-200 dark:border-white/[0.1] p-5 bg-gradient-to-r from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950 relative space-y-3">
                             <div
                               className="absolute top-0 right-0 w-36 h-36 opacity-20 blur-2xl pointer-events-none rounded-full"
                               style={{ backgroundColor: story.color }}
@@ -892,16 +892,16 @@ export default function ExecutivePortfolio() {
                                 )}
                               </div>
                               <div className="space-y-0.5">
-                                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block">
+                                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400 block">
                                   Official Credential Record
                                 </span>
-                                <h5 className="text-sm font-bold text-white">{story.title}</h5>
-                                <span className="text-xs font-mono text-amber-400/90">{story.role}</span>
+                                <h5 className="text-sm font-bold text-zinc-900 dark:text-white">{story.title}</h5>
+                                <span className="text-xs font-mono text-amber-600 dark:text-amber-400/90">{story.role}</span>
                               </div>
                             </div>
                           </div>
                         ) : (
-                          <div className="block lg:hidden rounded-2xl overflow-hidden border border-white/[0.1] relative h-72 sm:h-80 bg-zinc-950">
+                          <div className="block lg:hidden rounded-2xl overflow-hidden border border-zinc-200 dark:border-white/[0.1] relative h-72 sm:h-80 bg-zinc-900 dark:bg-zinc-950">
                             <img
                               src={storyDisplayImage}
                               alt=""
@@ -964,13 +964,13 @@ export default function ExecutivePortfolio() {
                         )}
 
                         {/* Summary */}
-                        <p className="text-sm text-zinc-300 leading-relaxed font-light">
+                        <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed font-light">
                           {story.summary}
                         </p>
 
                         {/* Quote callout */}
                         {story.quote && (
-                          <blockquote className="text-xs text-zinc-400 italic border-l-2 border-amber-400/50 pl-4 py-2 leading-relaxed bg-white/[0.02] rounded-r-lg">
+                          <blockquote className="text-xs text-zinc-700 dark:text-zinc-400 italic border-l-2 border-amber-500 dark:border-amber-400/50 pl-4 py-2 leading-relaxed bg-amber-50/50 dark:bg-white/[0.02] rounded-r-lg">
                             {story.quote}
                           </blockquote>
                         )}
@@ -980,7 +980,7 @@ export default function ExecutivePortfolio() {
                           {story.metrics.map((m, mi) => (
                             <span
                               key={mi}
-                              className="text-[10px] text-zinc-400 font-mono px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]"
+                              className="text-[10px] text-zinc-600 dark:text-zinc-400 font-mono px-2.5 py-1 rounded-md bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]"
                             >
                               ✓ {m}
                             </span>
@@ -996,25 +996,25 @@ export default function ExecutivePortfolio() {
 
           {/* ================= RIGHT COLUMN: STICKY SHOWCASE CONSOLE ================= */}
           <div className="hidden lg:block lg:col-span-5 sticky top-24 space-y-6">
-            <div className="p-6 rounded-3xl border border-white/[0.1] bg-zinc-950/90 backdrop-blur-2xl shadow-2xl space-y-5">
+            <div className="p-6 rounded-3xl border border-zinc-200/90 dark:border-white/[0.1] bg-white/95 dark:bg-zinc-950/90 backdrop-blur-2xl shadow-xl dark:shadow-2xl space-y-5">
               {/* Header Controls */}
               {activeStory.isCredential ? (
-                <div className="flex items-center justify-between p-2 px-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-xs font-mono">
-                  <div className="flex items-center gap-2 text-zinc-300">
-                    <ShieldCheck className="w-4 h-4 text-amber-400" />
+                <div className="flex items-center justify-between p-2 px-3.5 rounded-xl bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08] text-xs font-mono">
+                  <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                    <ShieldCheck className="w-4 h-4 text-amber-500 dark:text-amber-400" />
                     <span className="font-semibold uppercase tracking-wider text-[11px]">Official Credential Record</span>
                   </div>
-                  <span className="text-[10px] text-amber-400 font-mono px-2.5 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/20 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-[10px] text-amber-700 dark:text-amber-400 font-mono px-2.5 py-0.5 rounded-full bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/20 dark:border-amber-400/20 flex items-center gap-1 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
                     Verified
                   </span>
                 </div>
               ) : currentImages.length > 1 ? (
-                <div className="flex items-center justify-between p-1.5 px-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-xs font-mono">
+                <div className="flex items-center justify-between p-1.5 px-3 rounded-xl bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08] text-xs font-mono">
                   <button
                     type="button"
                     onClick={handlePrevImage}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white/[0.05] hover:bg-amber-400 hover:text-black text-zinc-300 transition-all cursor-pointer border border-white/[0.08] group"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white dark:bg-white/[0.05] hover:bg-amber-500 hover:text-white dark:hover:bg-amber-400 dark:hover:text-black text-zinc-700 dark:text-zinc-300 transition-all cursor-pointer border border-zinc-200 dark:border-white/[0.08] group shadow-xs"
                     title="Previous Photo"
                   >
                     <ChevronLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
@@ -1022,8 +1022,8 @@ export default function ExecutivePortfolio() {
                   </button>
 
                   <div className="flex items-center gap-2.5">
-                    <span className="text-[11px] font-mono text-zinc-400">
-                      Photo <strong className="text-amber-400 font-bold">{currentImageIndex + 1}</strong> of {currentImages.length}
+                    <span className="text-[11px] font-mono text-zinc-600 dark:text-zinc-400">
+                      Photo <strong className="text-amber-600 dark:text-amber-400 font-bold">{currentImageIndex + 1}</strong> of {currentImages.length}
                     </span>
                     <div className="flex items-center gap-1">
                       {currentImages.map((_, idx) => (
@@ -1036,8 +1036,8 @@ export default function ExecutivePortfolio() {
                           }}
                           className={`h-1.5 rounded-full transition-all cursor-pointer ${
                             idx === currentImageIndex
-                              ? 'w-5 bg-amber-400'
-                              : 'w-1.5 bg-white/20 hover:bg-white/40'
+                              ? 'w-5 bg-amber-500 dark:bg-amber-400'
+                              : 'w-1.5 bg-zinc-300 dark:bg-white/20 hover:bg-zinc-400 dark:hover:bg-white/40'
                           }`}
                           title={`Slide ${idx + 1}`}
                         />
@@ -1048,7 +1048,7 @@ export default function ExecutivePortfolio() {
                   <button
                     type="button"
                     onClick={handleNextImage}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white/[0.05] hover:bg-amber-400 hover:text-black text-zinc-300 transition-all cursor-pointer border border-white/[0.08] group"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white dark:bg-white/[0.05] hover:bg-amber-500 hover:text-white dark:hover:bg-amber-400 dark:hover:text-black text-zinc-700 dark:text-zinc-300 transition-all cursor-pointer border border-zinc-200 dark:border-white/[0.08] group shadow-xs"
                     title="Next Photo"
                   >
                     <span>Next</span>
@@ -1064,10 +1064,10 @@ export default function ExecutivePortfolio() {
                 perspective={1000}
                 transitionSpeed={800}
                 scale={1.01}
-                className="relative rounded-2xl overflow-hidden border border-white/[0.15] bg-black cursor-pointer shadow-2xl group"
+                className="relative rounded-2xl overflow-hidden border border-zinc-300/80 dark:border-white/[0.15] bg-black cursor-pointer shadow-xl group"
               >
                 {activeStory.isCredential ? (
-                  <div className="relative h-96 sm:h-[430px] w-full overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-zinc-950 p-7 flex flex-col justify-between border border-white/[0.08] rounded-2xl select-none">
+                  <div className="relative h-96 sm:h-[430px] w-full overflow-hidden bg-gradient-to-b from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-black dark:to-zinc-950 p-7 flex flex-col justify-between border border-zinc-200 dark:border-white/[0.08] rounded-2xl select-none">
                     {/* Ambient Radial Glow */}
                     <div
                       className="absolute inset-0 opacity-20 blur-3xl pointer-events-none"
@@ -1075,10 +1075,10 @@ export default function ExecutivePortfolio() {
                     />
 
                     {/* Top Header Badge */}
-                    <div className="relative z-10 flex items-center justify-between border-b border-white/[0.08] pb-3.5">
+                    <div className="relative z-10 flex items-center justify-between border-b border-zinc-200 dark:border-white/[0.08] pb-3.5">
                       <div className="flex items-center gap-2.5">
                         <div
-                          className="w-8 h-8 rounded-xl flex items-center justify-center border shadow-lg"
+                          className="w-8 h-8 rounded-xl flex items-center justify-center border shadow-md"
                           style={{
                             borderColor: `${activeStory.color}60`,
                             backgroundColor: `${activeStory.color}20`,
@@ -1094,15 +1094,15 @@ export default function ExecutivePortfolio() {
                           )}
                         </div>
                         <div>
-                          <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block">
+                          <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400 block">
                             Institutional Record
                           </span>
-                          <span className="text-xs font-bold text-white tracking-wide">
+                          <span className="text-xs font-bold text-zinc-900 dark:text-white tracking-wide">
                             {activeStory.badge}
                           </span>
                         </div>
                       </div>
-                      <span className="text-[10px] font-mono text-zinc-400 px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08]">
+                      <span className="text-[10px] font-mono text-zinc-600 dark:text-zinc-400 px-2.5 py-0.5 rounded-full bg-white dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">
                         {activeStory.date}
                       </span>
                     </div>
@@ -1119,7 +1119,7 @@ export default function ExecutivePortfolio() {
                           style={{ borderColor: activeStory.color }}
                         />
                         <div
-                          className="w-16 h-16 rounded-full flex items-center justify-center border shadow-[0_0_35px_rgba(255,255,255,0.12)]"
+                          className="w-16 h-16 rounded-full flex items-center justify-center border shadow-md"
                           style={{
                             borderColor: activeStory.color,
                             backgroundColor: `${activeStory.color}15`,
@@ -1137,35 +1137,35 @@ export default function ExecutivePortfolio() {
                       </div>
 
                       <div className="space-y-1">
-                        <h5 className="text-lg font-black text-white tracking-tight">
+                        <h5 className="text-lg font-black text-zinc-950 dark:text-white tracking-tight">
                           {activeStory.title}
                         </h5>
-                        <p className="text-xs font-mono font-medium text-amber-400">
+                        <p className="text-xs font-mono font-medium text-amber-600 dark:text-amber-400">
                           {activeStory.role}
                         </p>
-                        <p className="text-[11px] text-zinc-400">
+                        <p className="text-[11px] text-zinc-600 dark:text-zinc-400">
                           {activeStory.organization}
                         </p>
                       </div>
                     </div>
 
                     {/* Bottom Verified Attributes Matrix */}
-                    <div className="relative z-10 border-t border-white/[0.08] pt-3.5 space-y-2">
+                    <div className="relative z-10 border-t border-zinc-200 dark:border-white/[0.08] pt-3.5 space-y-2">
                       <div className="grid grid-cols-2 gap-2 text-[10px] font-mono">
                         {activeStory.metrics.slice(0, 4).map((m, mIdx) => (
                           <div
                             key={mIdx}
-                            className="flex items-center gap-1.5 p-1.5 rounded-lg bg-white/[0.03] border border-white/[0.05] text-zinc-300"
+                            className="flex items-center gap-1.5 p-1.5 rounded-lg bg-white dark:bg-white/[0.03] border border-zinc-200 dark:border-white/[0.05] text-zinc-700 dark:text-zinc-300 shadow-xs"
                           >
-                            <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />
+                            <CheckCircle2 className="w-3 h-3 text-emerald-500 dark:text-emerald-400 shrink-0" />
                             <span className="truncate">{m}</span>
                           </div>
                         ))}
                       </div>
                       <div className="flex items-center justify-between text-[9px] font-mono text-zinc-500 pt-1">
                         <span>SECURITY HASH: #CSJMU-{(activeStory.id).toUpperCase()}</span>
-                        <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
                           OFFICIALLY VALIDATED
                         </span>
                       </div>
@@ -1259,17 +1259,17 @@ export default function ExecutivePortfolio() {
 
               {/* Console Quick Metadata */}
               <div className="space-y-2.5 pt-1 text-xs">
-                <div className="flex justify-between items-center text-zinc-400 border-b border-white/[0.05] pb-2">
+                <div className="flex justify-between items-center text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-white/[0.05] pb-2">
                   <span className="font-mono text-zinc-500">Timeline:</span>
-                  <span className="font-medium text-white">{activeStory.date}</span>
+                  <span className="font-medium text-zinc-900 dark:text-white">{activeStory.date}</span>
                 </div>
-                <div className="flex justify-between items-center text-zinc-400 border-b border-white/[0.05] pb-2">
+                <div className="flex justify-between items-center text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-white/[0.05] pb-2">
                   <span className="font-mono text-zinc-500">Classification:</span>
-                  <span className="font-medium text-amber-300">{activeStory.badge}</span>
+                  <span className="font-medium text-amber-600 dark:text-amber-300">{activeStory.badge}</span>
                 </div>
 
                 {activeStory.quote && (
-                  <p className="text-[11px] text-zinc-400 italic line-clamp-3 pt-1">
+                  <p className="text-[11px] text-zinc-600 dark:text-zinc-400 italic line-clamp-3 pt-1">
                     {activeStory.quote}
                   </p>
                 )}
@@ -1282,59 +1282,59 @@ export default function ExecutivePortfolio() {
       {/* ============================================================ */}
       {/* 4. CORE CAPABILITY MATRIX */}
       {/* ============================================================ */}
-      <section id="competencies" className="max-w-7xl mx-auto px-6 py-20 border-t border-white/[0.08]">
+      <section id="competencies" className="max-w-7xl mx-auto px-6 py-20 border-t border-zinc-200/80 dark:border-white/[0.08]">
         <div className="mb-12 space-y-2">
-          <span className="text-xs font-mono uppercase tracking-widest text-amber-400">
+          <span className="text-xs font-mono uppercase tracking-widest text-amber-600 dark:text-amber-400 font-semibold">
             PRACTICAL COMPETENCIES
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-zinc-950 dark:text-white uppercase tracking-tight">
             Skill Architecture & Operating Strengths
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-8 rounded-3xl border border-white/[0.08] bg-zinc-950/70 backdrop-blur-md space-y-4 hover:border-cyan-400/40 transition-all">
-            <div className="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+          <div className="p-8 rounded-3xl border border-zinc-200/80 dark:border-white/[0.08] bg-white/90 dark:bg-zinc-950/70 backdrop-blur-md space-y-4 hover:border-cyan-500/50 dark:hover:border-cyan-400/40 shadow-sm hover:shadow-lg transition-all">
+            <div className="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-600 dark:text-cyan-400">
               <Mic className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-bold text-white">Stage Moderation & Oratory</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed font-light">
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Stage Moderation & Oratory</h3>
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
               Auditorium moderation, speaker introductions, and itinerary timekeeping across 20+ documented university and regional developer conferences.
             </p>
-            <div className="flex flex-wrap gap-1.5 pt-2 text-[10px] font-mono text-zinc-400">
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">Auditorium Protocol</span>
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">Audience Engagement</span>
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">Keynote Moderation</span>
+            <div className="flex flex-wrap gap-1.5 pt-2 text-[10px] font-mono text-zinc-600 dark:text-zinc-400">
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">Auditorium Protocol</span>
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">Audience Engagement</span>
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">Keynote Moderation</span>
             </div>
           </div>
 
-          <div className="p-8 rounded-3xl border border-white/[0.08] bg-zinc-950/70 backdrop-blur-md space-y-4 hover:border-emerald-400/40 transition-all">
-            <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+          <div className="p-8 rounded-3xl border border-zinc-200/80 dark:border-white/[0.08] bg-white/90 dark:bg-zinc-950/70 backdrop-blur-md space-y-4 hover:border-emerald-500/50 dark:hover:border-emerald-400/40 shadow-sm hover:shadow-lg transition-all">
+            <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
               <Trophy className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-bold text-white">Competitive Presentation & Pitching</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed font-light">
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Competitive Presentation & Pitching</h3>
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
               Formulating structured problem-solution narratives, prototype demonstrations, and defending project value before corporate and mentor evaluation panels.
             </p>
-            <div className="flex flex-wrap gap-1.5 pt-2 text-[10px] font-mono text-zinc-400">
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">Pitch Structuring</span>
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">Technical Defense</span>
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">Jury Q&A Handling</span>
+            <div className="flex flex-wrap gap-1.5 pt-2 text-[10px] font-mono text-zinc-600 dark:text-zinc-400">
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">Pitch Structuring</span>
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">Technical Defense</span>
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">Jury Q&A Handling</span>
             </div>
           </div>
 
-          <div className="p-8 rounded-3xl border border-white/[0.08] bg-zinc-950/70 backdrop-blur-md space-y-4 hover:border-purple-400/40 transition-all">
-            <div className="w-10 h-10 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+          <div className="p-8 rounded-3xl border border-zinc-200/80 dark:border-white/[0.08] bg-white/90 dark:bg-zinc-950/70 backdrop-blur-md space-y-4 hover:border-purple-500/50 dark:hover:border-purple-400/40 shadow-sm hover:shadow-lg transition-all">
+            <div className="w-10 h-10 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400">
               <Users className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-bold text-white">Community & Society Operations</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed font-light">
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Community & Society Operations</h3>
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
               Executive Joint Secretary at CodeVidya and chapter coordinator at Kanpur AI Space. Managing event logistics, student registrations, and technical workshop operations.
             </p>
-            <div className="flex flex-wrap gap-1.5 pt-2 text-[10px] font-mono text-zinc-400">
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">CodeVidya Society</span>
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">Event Logistics</span>
-              <span className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.08]">Peer Mentorship</span>
+            <div className="flex flex-wrap gap-1.5 pt-2 text-[10px] font-mono text-zinc-600 dark:text-zinc-400">
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">CodeVidya Society</span>
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">Event Logistics</span>
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-white/[0.04] border border-zinc-200 dark:border-white/[0.08]">Peer Mentorship</span>
             </div>
           </div>
         </div>
@@ -1343,34 +1343,34 @@ export default function ExecutivePortfolio() {
       {/* ============================================================ */}
       {/* 5. FLOATING QUICK JUMP NAVIGATOR */}
       {/* ============================================================ */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-full border border-white/[0.12] bg-black/85 backdrop-blur-xl shadow-2xl text-xs font-mono">
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-full border border-zinc-300/80 dark:border-white/[0.12] bg-white/90 dark:bg-black/85 backdrop-blur-xl shadow-2xl text-xs font-mono text-zinc-700 dark:text-zinc-300">
         <button
           onClick={() => document.getElementById('act-oratory')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-3 py-1 rounded-full hover:bg-white/10 text-zinc-300 hover:text-white transition-all cursor-pointer"
+          className="px-3 py-1 rounded-full hover:bg-zinc-100 dark:hover:bg-white/10 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white transition-all cursor-pointer"
         >
           01 Summits
         </button>
         <button
           onClick={() => document.getElementById('act-hackathons')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-3 py-1 rounded-full hover:bg-white/10 text-zinc-300 hover:text-white transition-all cursor-pointer"
+          className="px-3 py-1 rounded-full hover:bg-zinc-100 dark:hover:bg-white/10 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white transition-all cursor-pointer"
         >
           02 Competitions
         </button>
         <button
           onClick={() => document.getElementById('act-leadership')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-3 py-1 rounded-full hover:bg-white/10 text-zinc-300 hover:text-white transition-all cursor-pointer"
+          className="px-3 py-1 rounded-full hover:bg-zinc-100 dark:hover:bg-white/10 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white transition-all cursor-pointer"
         >
           03 Leadership
         </button>
         <button
           onClick={() => document.getElementById('act-academics')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-3 py-1 rounded-full hover:bg-white/10 text-zinc-300 hover:text-white transition-all cursor-pointer"
+          className="px-3 py-1 rounded-full hover:bg-zinc-100 dark:hover:bg-white/10 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white transition-all cursor-pointer"
         >
           04 Academics
         </button>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="p-1.5 rounded-full bg-white/10 hover:bg-amber-400 hover:text-black text-zinc-300 transition-all cursor-pointer ml-1"
+          className="p-1.5 rounded-full bg-zinc-100 dark:bg-white/10 hover:bg-amber-500 hover:text-white dark:hover:bg-amber-400 dark:hover:text-black text-zinc-700 dark:text-zinc-300 transition-all cursor-pointer ml-1"
           title="Back to Top"
         >
           <ArrowUp className="w-3.5 h-3.5" />
@@ -1380,9 +1380,9 @@ export default function ExecutivePortfolio() {
       {/* ============================================================ */}
       {/* 6. EXECUTIVE FOOTER */}
       {/* ============================================================ */}
-      <footer className="max-w-7xl mx-auto px-6 pt-16 pb-28 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-500 font-mono">
+      <footer className="max-w-7xl mx-auto px-6 pt-16 pb-28 border-t border-zinc-200/80 dark:border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-500 font-mono">
         <div>
-          <p className="text-zinc-300 font-sans font-medium text-sm">
+          <p className="text-zinc-800 dark:text-zinc-300 font-sans font-medium text-sm">
             Janvi Sahu · CSJMU Batch of 2027
           </p>
           <p className="text-zinc-500 mt-0.5">
@@ -1395,7 +1395,7 @@ export default function ExecutivePortfolio() {
             href="https://www.linkedin.com/in/janvi-sahu-0968b8329/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-amber-400 transition-colors flex items-center gap-1.5"
+            className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400"
           >
             <span>LinkedIn Profile</span>
             <ExternalLink className="w-3.5 h-3.5" />
