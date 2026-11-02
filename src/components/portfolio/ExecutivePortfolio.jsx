@@ -467,7 +467,15 @@ export default function ExecutivePortfolio() {
     });
   };
 
-  // Scroll spy with hysteresis and requestAnimationFrame to avoid flickering
+  // Preload all milestone & archive images on mount for 100% instant, lag-free image switching
+  useEffect(() => {
+    allArchiveImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  // High-precision focal-line scroll spy (Instant, zero-gap milestone tracking)
   useEffect(() => {
     let rafId = null;
 
@@ -475,44 +483,36 @@ export default function ExecutivePortfolio() {
       if (rafId) cancelAnimationFrame(rafId);
       rafId = requestAnimationFrame(() => {
         const vh = window.innerHeight;
-        const currentIdx = activeStoryIndexRef.current;
+        // Natural eye focus line during scrolling: ~40% of viewport height
+        const focalLine = vh * 0.40;
 
-        // Check if currently active story is comfortably in view
-        const currentStory = allStories[currentIdx];
-        if (currentStory) {
-          const currentEl = document.getElementById(`story-${currentStory.id}`);
-          if (currentEl) {
-            const curRect = currentEl.getBoundingClientRect();
-            const topBound = Math.max(vh * 0.22, curRect.top);
-            const bottomBound = Math.min(vh * 0.72, curRect.bottom);
-            const activePresence = Math.max(0, bottomBound - topBound);
-            if (activePresence > 140) {
-              return;
-            }
+        let bestIndex = -1;
+        let minDistance = Infinity;
+
+        for (let i = 0; i < allStories.length; i++) {
+          const story = allStories[i];
+          const el = document.getElementById(`story-${story.id}`);
+          if (!el) continue;
+
+          const rect = el.getBoundingClientRect();
+
+          // Direct hit: Focal line is inside this story card
+          if (rect.top <= focalLine && rect.bottom >= focalLine) {
+            bestIndex = i;
+            break;
+          }
+
+          // Otherwise track closest story card center to focal line
+          const cardCenter = (rect.top + rect.bottom) / 2;
+          const dist = Math.abs(cardCenter - focalLine);
+          if (dist < minDistance) {
+            minDistance = dist;
+            bestIndex = i;
           }
         }
 
-        const focusTop = vh * 0.22;
-        const focusBottom = vh * 0.72;
-
-        let bestIndex = -1;
-        let maxOverlap = 0;
-
-        allStories.forEach((story, index) => {
-          const el = document.getElementById(`story-${story.id}`);
-          if (!el) return;
-          const rect = el.getBoundingClientRect();
-          const visibleTop = Math.max(focusTop, rect.top);
-          const visibleBottom = Math.min(focusBottom, rect.bottom);
-          const overlap = Math.max(0, visibleBottom - visibleTop);
-
-          if (overlap > maxOverlap) {
-            maxOverlap = overlap;
-            bestIndex = index;
-          }
-        });
-
-        if (bestIndex !== -1 && maxOverlap >= 90 && bestIndex !== currentIdx) {
+        if (bestIndex !== -1 && bestIndex !== activeStoryIndexRef.current) {
+          activeStoryIndexRef.current = bestIndex;
           setActiveStoryIndex(bestIndex);
         }
       });
@@ -521,6 +521,7 @@ export default function ExecutivePortfolio() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleScroll);
     handleScroll();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
@@ -816,7 +817,13 @@ export default function ExecutivePortfolio() {
                       <div
                         key={story.id}
                         id={`story-${story.id}`}
-                        onClick={() => setActiveStoryIndex(allStories.findIndex((s) => s.id === story.id))}
+                        onClick={() => {
+                          const idx = allStories.findIndex((s) => s.id === story.id);
+                          if (idx !== -1) {
+                            activeStoryIndexRef.current = idx;
+                            setActiveStoryIndex(idx);
+                          }
+                        }}
                         className={`group p-7 sm:p-8 rounded-3xl border transition-all duration-400 space-y-6 shadow-xl relative overflow-hidden cursor-pointer ${
                           isStoryActive
                             ? 'border-amber-400/60 bg-zinc-950/95 shadow-[0_0_40px_rgba(245,158,11,0.08)] ring-1 ring-amber-400/20'
@@ -1184,15 +1191,17 @@ export default function ExecutivePortfolio() {
                     />
 
                     {/* Sharp foreground image: object-contain so all faces are completely visible */}
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence mode="popLayout">
                       <motion.img
                         key={currentDisplayImage}
                         src={currentDisplayImage}
                         alt={activeStory.title}
+                        loading="eager"
+                        decoding="async"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.15, ease: 'easeOut' }}
+                        transition={{ duration: 0.18, ease: 'easeOut' }}
                         className="relative z-10 max-h-full max-w-full object-contain object-center drop-shadow-2xl"
                       />
                     </AnimatePresence>
