@@ -851,16 +851,9 @@ export default function ExecutivePortfolio() {
 
                         {/* Title & Organization */}
                         <div className="space-y-1.5">
-                          <div className="flex flex-wrap items-center justify-between gap-2">
-                            <h4 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
-                              {story.title}
-                            </h4>
-                            {storyImages.length > 1 && (
-                              <span className="text-[10px] text-amber-700 dark:text-amber-300 font-mono bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/25 dark:border-amber-400/25 px-2.5 py-0.5 rounded-full font-medium">
-                                {storyImages.length} Photos Available
-                              </span>
-                            )}
-                          </div>
+                          <h4 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
+                            {story.title}
+                          </h4>
                           <p className="text-xs text-amber-600 dark:text-amber-400/90 font-mono flex items-center gap-1.5 font-medium">
                             <Building className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
                             <span>{story.organization}</span>
@@ -914,11 +907,6 @@ export default function ExecutivePortfolio() {
                               alt={story.title}
                               className="relative z-10 w-full h-full object-contain object-center drop-shadow-xl"
                             />
-                            {storyImages.length > 1 && (
-                              <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-[10px] font-mono text-amber-300">
-                                <span>Photo {currentStoryImgIdx + 1} of {storyImages.length}</span>
-                              </div>
-                            )}
                             <div className="absolute bottom-3 right-3 z-20 flex items-center gap-2">
                               {storyImages.length > 1 && (
                                 <div className="flex items-center gap-1 bg-black/80 backdrop-blur-md rounded-full border border-white/10 p-1">
@@ -1229,28 +1217,16 @@ export default function ExecutivePortfolio() {
                     )}
 
                     {/* Glass Overlay on hover */}
-                    <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex flex-col justify-end p-4 space-y-1.5 pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400">
-                        {storyActiveBadge(activeStory)}
-                      </span>
-                      <h4 className="text-base font-bold text-white leading-tight">
+                    <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-4 space-y-2 pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity">
+                      <h4 className="text-base font-bold text-white leading-tight drop-shadow-md">
                         {activeStory.title}
                       </h4>
-                      <p className="text-[11px] text-zinc-400 font-mono line-clamp-1">
-                        {activeStory.organization}
-                      </p>
 
-                      <div className="pt-1.5 flex items-center justify-between text-xs text-white/90">
-                        <span className="inline-flex items-center gap-1.5 bg-black/70 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md text-[11px] font-mono pointer-events-auto">
+                      <div className="pt-1 flex items-center justify-between text-xs text-white/90">
+                        <span className="inline-flex items-center gap-1.5 bg-black/70 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md text-[11px] font-mono pointer-events-auto shadow-md">
                           <ZoomIn className="w-3.5 h-3.5 text-amber-400" />
                           <span>Tap to Enlarge</span>
                         </span>
-
-                        {currentImages.length > 1 && (
-                          <span className="text-[10px] text-amber-300 font-mono bg-amber-950/80 border border-amber-500/30 px-2 py-0.5 rounded-full">
-                            {currentImages.length} Stage Captures
-                          </span>
-                        )}
                       </div>
                     </div>
                   </div>
