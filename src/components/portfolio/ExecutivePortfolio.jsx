@@ -35,7 +35,7 @@ import {
 
 // Complete archive of high-resolution stage and event captures
 const allArchiveImages = [
-  '/events/flutter/gehna-flutter-keynote-stage.jpg',
+  '/events/flutter/janvi-flutter-keynote-stage.jpg',
   '/events/sih/sih-team-sudarshan.png',
   '/events/sih/sih-title-slide.png',
   '/events/flutter/flutter-stage-mic-speaker.jpg',
@@ -161,9 +161,9 @@ const portfolioActs = [
         date: 'State Technical Summit',
         color: '#06b6d4',
         badge: 'State Summit',
-        primaryImage: '/events/flutter/gehna-flutter-keynote-stage.jpg',
+        primaryImage: '/events/flutter/janvi-flutter-keynote-stage.jpg',
         images: [
-          '/events/flutter/gehna-flutter-keynote-stage.jpg',
+          '/events/flutter/janvi-flutter-keynote-stage.jpg',
           '/events/flutter/flutter-stage-mic-speaker.jpg',
           '/events/flutter/flutter-standee-pose.jpg',
           '/events/flutter/flutter-podium-shatabdi.jpg',

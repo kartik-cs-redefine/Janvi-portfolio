@@ -185,7 +185,7 @@ export default function Navbar() {
             <div className="space-y-3 text-sm">
               <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] space-y-1">
                 <span className="text-[10px] font-mono uppercase text-zinc-500">Official Profile</span>
-                <p className="text-white font-medium">Janvi Sahu (Gehna)</p>
+                <p className="text-white font-medium">Janvi Sahu</p>
                 <p className="text-xs text-zinc-400 font-light">Lead Anchor & BCA Scholar · CSJM University</p>
               </div>
 

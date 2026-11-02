@@ -1,6 +1,6 @@
-# Gehna (Janvi Sahu) — Executive Portfolio
+# Janvi Sahu — Executive Portfolio
 
-Official executive dossier and personal portfolio of **Janvi Sahu (Gehna)**: Lead Stage Anchor, Keynote Orator, Smart India Hackathon Finalist, and Technical Operations Strategist.
+Official executive dossier and personal portfolio of **Janvi Sahu**: Lead Stage Anchor, Keynote Orator, Smart India Hackathon Finalist, and Technical Operations Strategist.
 
 ---
 
@@ -42,13 +42,13 @@ npm run build
    ```bash
    git init
    git add .
-   git commit -m "feat: initial release of Gehna Executive Portfolio"
+   git commit -m "feat: initial release of Janvi Sahu Executive Portfolio"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/gehna-portfolio.git
+   git remote add origin https://github.com/<your-username>/janvi-sahu-portfolio.git
    git push -u origin main
    ```
 2. Go to [Vercel Dashboard](https://vercel.com/new).
-3. Import the `gehna-portfolio` repository.
+3. Import the `janvi-sahu-portfolio` repository.
 4. Framework Preset: **Vite** (auto-detected).
 5. Click **Deploy**! 🚀
 
